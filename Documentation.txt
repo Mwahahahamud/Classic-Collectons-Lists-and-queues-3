@@ -1,0 +1,14 @@
+Methods:
+
+Constructor(): Creates a list with one element (null). Takes no arguments.
+addFirst(): Appends an element to the front of the list. First checks if there is enough space.
+If not, it creates a new array double the size and copies the elements over.
+removeFirst(): Removes the first element. Also decreases the size of the array by creating a new
+array and copying the elements over.
+get(): Returns the nth index of the array.
+length(): Returns the length of the list.
+create(): Creates a new ArrayedList based on the argument.
+toString(): prints out the array without spaces between the elements.
+
+Fields:
+this.body: this contains the actual array that stores the data.
