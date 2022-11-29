@@ -1,18 +1,11 @@
-package uk.ac.cam.mh2169.linkedlists;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.NoSuchElementException;
 
 public class ArrayedList <T> implements OopList{
 
-    private T[] body;  // This is the body of the array
-
-
-//    public ArrayedList(int size){
-//        Object[] workaround = new Object[size];
-//        this.body = (T[]) workaround;
-//    }
+    private T[] body;  // This is where the data is stored.
+    
 
     public ArrayedList(){
         this.body = (T[]) new Object[1];
@@ -20,7 +13,8 @@ public class ArrayedList <T> implements OopList{
 
     @Override
     public void addFirst(Object element) {
-
+        // Appends an element to the start of the list. If necessary, then it double the length of the list.
+        
         if (this.body == null){
             throw new NoSuchElementException("Array not initialised");
         }
@@ -33,7 +27,7 @@ public class ArrayedList <T> implements OopList{
 
             T[] newArray;
             Object workaround = new Object[this.body.length * 2];
-            newArray = (T[]) workaround;  // Slightly illegal method
+            newArray = (T[]) workaround; 
 
             for (int i = 0; i < this.body.length; i++){
                 newArray[this.body.length - i] = this.body[this.body.length - i - 1];
@@ -46,6 +40,7 @@ public class ArrayedList <T> implements OopList{
 
     @Override
     public Object removeFirst() {
+        // Removes the first element, and also reduces the size of the ArrayedList by one.
         Object returnObject = this.body[0];
 
         Object[] workaround = new Object[this.body.length - 1];
@@ -63,6 +58,7 @@ public class ArrayedList <T> implements OopList{
 
     @Override
     public Object get(int n) {
+        // Returns an object
         if (n >= this.body.length){
             throw new NoSuchElementException();
         }
@@ -71,11 +67,12 @@ public class ArrayedList <T> implements OopList{
 
     @Override
     public int length() {
+        // Returns the length of the object
         return body.length;
-        // Cheating method
     }
 
     public static <T> ArrayedList create(T[] elements){
+        // Creates a new ArrayedList based on the input.
         ArrayedList newArrayedList = new ArrayedList();
         newArrayedList.body = elements;
         return newArrayedList;
@@ -83,6 +80,8 @@ public class ArrayedList <T> implements OopList{
 
     @Override
     public String toString(){
+        // String method that gets rid of spaces between the elements in the list.
+        
         String returnString = "[";
 
         if (body.length > 0) {
