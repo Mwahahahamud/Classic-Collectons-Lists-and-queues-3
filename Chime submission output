@@ -1,0 +1,113 @@
+Test harness binary found
+Compiled submission found
+
+- Running test arrayList_implementsOopList
+- Creating new object using constructor uk.ac.cam.mh2169.linkedlists.LinkList()
+- New object will be referred to as 'arrayList'
+
+- Running test linkList_implementsOopList
+- Creating new object using constructor uk.ac.cam.mh2169.linkedlists.LinkList()
+- New object will be referred to as 'linkList'
+
+- Running test toString_returnsElements_forStringList
+- Invoking static method uk.ac.cam.mh2169.linkedlists.LinkList.create([a, b, c, d])
+- Invoking instance method uk.ac.cam.mh2169.linkedlists.LinkList.toString()
+
+- Running test toString_returnsElements_forIntegerList
+- Invoking static method uk.ac.cam.mh2169.linkedlists.LinkList.create([1, 2, 3, 4])
+- Invoking instance method uk.ac.cam.mh2169.linkedlists.LinkList.toString()
+
+- Running test length_returnsFour_whenListHasFourElements
+- Creating new object using constructor uk.ac.cam.mh2169.linkedlists.ArrayedList()
+- New object will be referred to as 'list'
+- Invoking instance method list.addFirst(4)
+- Invoking instance method list.addFirst(3)
+- Invoking instance method list.addFirst(2)
+- Invoking instance method list.addFirst(1)
+- Invoking instance method list.length()
+
+- Running test create_returnsEmptyList_whenArrayIsEmpty
+- Invoking static method uk.ac.cam.mh2169.linkedlists.ArrayedList.create([])
+- Invoking instance method uk.ac.cam.mh2169.linkedlists.ArrayedList.toString()
+
+- Running test get_returnsNthElement
+- Creating new object using constructor uk.ac.cam.mh2169.linkedlists.ArrayedList()
+- New object will be referred to as 'list'
+- Invoking instance method list.addFirst(4)
+- Invoking instance method list.addFirst(3)
+- Invoking instance method list.addFirst(2)
+- Invoking instance method list.addFirst(1)
+- Invoking instance method list.get(2)
+
+- Running test toString_isSingleItem_whenListContainsOneItem
+- Creating new object using constructor uk.ac.cam.mh2169.linkedlists.ArrayedList()
+- New object will be referred to as 'list'
+- Invoking instance method list.addFirst(1)
+- Invoking instance method list.toString()
+
+- Running test get_throwsNoSuchElementException_ifListTooShort
+- Creating new object using constructor uk.ac.cam.mh2169.linkedlists.ArrayedList()
+- New object will be referred to as 'list'
+- Invoking instance method list.addFirst(4)
+- Invoking instance method list.addFirst(3)
+- Invoking instance method list.addFirst(2)
+- Invoking instance method list.addFirst(1)
+- Invoking instance method list.get(10)
+
+- Running test create_addsElementsInOrder
+- Invoking static method uk.ac.cam.mh2169.linkedlists.ArrayedList.create([1, 2, 3])
+- Invoking instance method uk.ac.cam.mh2169.linkedlists.ArrayedList.toString()
+
+- Running test toString_isEmptyList_whenListEmpty
+- Creating new object using constructor uk.ac.cam.mh2169.linkedlists.ArrayedList()
+- New object will be referred to as 'list'
+- Invoking instance method list.toString()
+
+- Running test remove_returnsFirstElement
+- Creating new object using constructor uk.ac.cam.mh2169.linkedlists.ArrayedList()
+- New object will be referred to as 'list'
+- Invoking instance method list.addFirst(1)
+- Invoking instance method list.removeFirst()
+
+- Running test toString_isTwoThenOne_whenListHasOneThenTwoAdded
+- Creating new object using constructor uk.ac.cam.mh2169.linkedlists.ArrayedList()
+- New object will be referred to as 'list'
+- Invoking instance method list.addFirst(1)
+- Invoking instance method list.addFirst(2)
+- Invoking instance method list.toString()
+
+- Running test remove_leavesEmptyList_whenListHasOneElement
+- Creating new object using constructor uk.ac.cam.mh2169.linkedlists.ArrayedList()
+- New object will be referred to as 'list'
+- Invoking instance method list.addFirst(1)
+- Invoking instance method list.removeFirst()
+- Invoking instance method list.toString()
+
+Pass: 14 out of 14 tests passed
+check-test-coverage (Completed in 3 seconds)
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------< uk.ac.cam.mh2169:task-linkedLists >------------------
+[INFO] Building task-linkedLists 1.0.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.8.5:report (default-cli) @ task-linkedLists ---
+[INFO] Loading execution data file /mnt/pottery/SUBMISSION/target/jacoco.exec
+[INFO] Analyzed bundle 'task-linkedLists' with 4 classes
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.354 s
+[INFO] Finished at: 2022-11-28T17:19:33Z
+[INFO] ------------------------------------------------------------------------
+
+
+Coverage report
+
+uk.ac.cam.mh2169.linkedlists.LinkList             100%
+uk.ac.cam.mh2169.linkedlists.LinkList.Node        100%
+uk.ac.cam.mh2169.linkedlists.ArrayedList          83%
+--
+OVERALL                                           90%
+--
+REQUIRED                                          90%
